@@ -18,7 +18,7 @@ public class ShowtimesController : ControllerBase
     [HttpGet("shows/{movieId}")]
     public IActionResult GetForMovie(int movieId)
     {
-        var list = _shows.GetShowtimesForMovie(movieId);
+        var list = _shows.GetShowtimesForMovie(int movieId);
         return Ok(list);
     }
 }
