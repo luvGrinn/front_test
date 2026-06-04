@@ -18,7 +18,7 @@ public class ShowtimesController : ControllerBase
     [HttpGet("shows/{movieId}")]
     public IActionResult GetForMovie(int movieId)
     {
-        var list = _shows.GetShowtimesForMovie(int movieId);
+        var list = _shows.GetShowtimesForMovie(movieId);
         return Ok(list);
     }
 }
@@ -38,7 +38,7 @@ public class ShowtimesFlow : ShowtimesAction, IShowtimesAction
 
 public class ShowtimesAction
 {
-    protected List<DateTime> ExecuteGetShowtimesForMovie(movieId)
+    protected List<DateTime> ExecuteGetShowtimesForMovie(int movieId)
     {
         // логика
         return list;
